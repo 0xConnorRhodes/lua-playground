@@ -1,16 +1,17 @@
 fighter_name = "Chun Li"
+fighter_name_lower = string.lower(fighter_name)
 
-if fighter_name == "Ryu" then
+if fighter_name_lower == "ryu" then
 	attack_move = "Hadouken"
-elseif fighter_name == "Chun Li" then
+elseif fighter_name_lower == "chun li" then
 	attack_move = "Lightning Kick"
-elseif fighter_name == "Guile" then
+elseif fighter_name_lower == "guile" then
 	attack_move = "Sonic Boom"
-elseif fighter_name == "Honda" then
+elseif fighter_name_lower == "honda" then
 	attack_move = "Hundred Hand Slap"
-elseif fighter_name == "Ken" then
+elseif fighter_name_lower == "ken" then
 	attack_move = "Hadouken"
-elseif fighter_name == "Blanka" then
+elseif fighter_name_lower == "blanka" then
 	attack_move = "Electric Shock"
 end
 
