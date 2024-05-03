@@ -28,6 +28,11 @@ function showBoard(board)
   )
 end
 
+function placeMarker(board, player, row, column)
+  board[row][column] = tostring(player)
+  return board
+end
+
 function checkWinner(board)
 end
 
@@ -37,6 +42,6 @@ end
 -- program flow
 
 local board = createBoard()
+board = placeMarker(board, 'X', 1, 2)
 
 print(showBoard(board))
-
