@@ -18,7 +18,14 @@ function showBoard(board)
       -- build each row in the form of 1 [ ] [ ] [ ]
       output[i] = i..' ['..board[i][1]..']['..board[i][2]..']['..board[i][3]..']'
     end
-  return output.topRow.."\n"..output[1].."\n"..output[2].."\n"..output[3]
+  -- return multiline string with top row and tic tac toe table. 
+  -- Parens allow for newlines and make visual structure clear
+  return (
+    output.topRow.."\n"..
+    output[1].."\n"..
+    output[2].."\n"..
+    output[3]
+  )
 end
 
 function checkWinner(board)
