@@ -34,6 +34,24 @@ function placeMarker(board, player, row, column) -- returns new board
 end
 
 function checkWinner(board)
+  -- check rows
+  if (board[1][1] ~= ' ' and
+      board[1][1] == board[1][2] and
+      board[1][2] == board[1][3]) then
+        return board[1][1]
+  end
+  if (board[2][1] ~= ' ' and
+      board[2][1] == board[2][2] and
+      board[2][2] == board[2][3]) then
+        return board[2][1]
+  end
+  if (board[3][1] ~= ' ' and
+      board[3][1] == board[3][2] and
+      board[3][2] == board[3][3]) then
+        return board[3][1]
+  end
+
+  -- check columns
 end
 
 function checkBoardFull(board) -- returns boolean
