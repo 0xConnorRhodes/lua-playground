@@ -52,6 +52,32 @@ function checkWinner(board)
   end
 
   -- check columns
+  if (board[1][1] ~= ' ' and
+      board[1][1] == board[2][1] and
+      board[2][1] == board[3][1]) then return board[1][1]
+  end
+  if (board[1][2] ~= ' ' and
+      board[1][2] == board[2][2] and
+      board[2][2] == board[3][2]) then
+        return board[1][2]
+  end
+  if (board[1][3] ~= ' ' and
+      board[1][3] == board[2][3] and
+      board[2][3] == board[3][3]) then
+        return board[1][3]
+  end
+
+  -- check diagonals
+  if (board[1][1] ~= ' ' and
+      board[1][1] == board[2][2] and
+      board[2][2] == board[3][3]) then
+        return board[1][1]
+  end
+  if (board[1][3] ~= ' ' and
+      board[1][3] == board[2][2] and
+      board[2][2] == board[3][1]) then
+        return board[1][3]
+  end
 end
 
 function checkBoardFull(board) -- returns boolean
