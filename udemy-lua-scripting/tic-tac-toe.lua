@@ -95,7 +95,23 @@ end
 
 -- program flow
 
-local board = createBoard()
+local player = "X"
+local move = 1
+local game_over = false
+print("Welcome to Tic Tac Toe")
+
+while not game_over do
+  local board = createBoard()
+  print(showBoard(board))
+
+  print("Player "..player..": Choose a row")
+  local place_row = io.read("*n")
+
+  print("Player "..player..": Choose a row")
+  local place_column = io.read("*n")
+
+end
+
 board = placeMarker(board, 'X', 1, 1)
 board = placeMarker(board, 'X', 1, 2)
 board = placeMarker(board, 'X', 1, 3)
